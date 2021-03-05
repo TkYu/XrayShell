@@ -55,6 +55,12 @@ namespace XrayShell.Model
                     config.hotkey = new HotkeyConfig();
                 if (config.subscribes == null)
                     config.subscribes = new List<SubscribeConfig>();
+                if (config.configs?.Any(c=>c.group == "")??false)
+                    config.configs.ForEach(c =>
+                    {
+                        if (c.group == "")
+                            c.group = null;
+                    });
                 return config;
             }
             catch (Exception e)
