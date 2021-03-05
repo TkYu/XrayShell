@@ -400,7 +400,7 @@ namespace XrayShell
         /// <summary>
         /// 分组，默认空
         /// </summary>
-        public string group { get; set; } = "";
+        public string group { get; set; } = null;
     }
 
     public class Vless
