@@ -541,6 +541,7 @@
             this.TlsSelect.Name = "TlsSelect";
             this.TlsSelect.Size = new System.Drawing.Size(437, 33);
             this.TlsSelect.TabIndex = 18;
+            this.TlsSelect.SelectedIndexChanged += new System.EventHandler(this.TlsSelect_SelectedIndexChanged);
             // 
             // ServersListBox
             // 

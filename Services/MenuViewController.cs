@@ -699,10 +699,15 @@ namespace XrayShell.Services
                                     if (success)
                                         splash.FormClosed += splash_FormClosed;
                                 }
-                                else
+                                else if(proto == "http" || proto == "https")
                                 {
                                     _urlToOpen = result.Text;
                                     splash.FormClosed += openURLFromQRCode;
+                                }
+                                else
+                                {
+                                    _urlToOpen = result.Text;
+                                    splash.FormClosed += copyFromQRCode;
                                 }
                             }
                             else

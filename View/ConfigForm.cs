@@ -437,5 +437,19 @@ namespace XrayShell.View
         {
             UpdateControls();
         }
+
+        private void TlsSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TlsSelect.SelectedItem?.ToString() == "xtls")
+            {
+                FlowSelect.Enabled = true;
+                FlowSelect.DataSource = Xray.Flows;
+            }
+            else
+            {
+                FlowSelect.DataSource = new[] {""};
+                FlowSelect.Enabled = false;
+            }
+        }
     }
 }
